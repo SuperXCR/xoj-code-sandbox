@@ -10,6 +10,5 @@ import com.yupi.xojcodesandbox.model.ExecuteCodeResponse;
  * @Create 2024-01-03
  */
 public interface CodeSandbox {
-
     ExecuteCodeResponse executeCode(ExecuteCodeRequest executeCodeRequest);
 }
