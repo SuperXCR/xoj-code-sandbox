@@ -27,17 +27,17 @@ public abstract class JavaCodeSandboxTemplate implements CodeSandbox {
     private static final String GLOBAL_JAVA_CLASS_NAME = "Main.java";
     private static final Long TIME_OUT = 5000L;
 
-    public static void main(String[] args) {
-        JavaNativeCodeSandboxOld javaNativeCodeSandbox = new JavaNativeCodeSandboxOld();
-        ExecuteCodeRequest executeCodeRequest = new ExecuteCodeRequest();
-        executeCodeRequest.setInputList(Arrays.asList("1 2", "1 3"));
-        String code = ResourceUtil.readStr("testCode/simpleComputeArgs/Simple.java", StandardCharsets.UTF_8);
-//        String code = ResourceUtil.readStr("testCode/unsafeCode/MemoryError.java", StandardCharsets.UTF_8);
-        executeCodeRequest.setCode(code);
-        executeCodeRequest.setLanguage("java");
-        ExecuteCodeResponse executeCodeResponse = javaNativeCodeSandbox.executeCode(executeCodeRequest);
-        System.out.println(executeCodeResponse);
-    }
+//    public static void main(String[] args) {
+//        JavaNativeCodeSandboxOld javaNativeCodeSandbox = new JavaNativeCodeSandboxOld();
+//        ExecuteCodeRequest executeCodeRequest = new ExecuteCodeRequest();
+//        executeCodeRequest.setInputList(Arrays.asList("1 2", "1 3"));
+//        String code = ResourceUtil.readStr("testCode/simpleComputeArgs/Simple.java", StandardCharsets.UTF_8);
+////        String code = ResourceUtil.readStr("testCode/unsafeCode/MemoryError.java", StandardCharsets.UTF_8);
+//        executeCodeRequest.setCode(code);
+//        executeCodeRequest.setLanguage("java");
+//        ExecuteCodeResponse executeCodeResponse = javaNativeCodeSandbox.executeCode(executeCodeRequest);
+//        System.out.println(executeCodeResponse);
+//    }
 
     @Override
     public ExecuteCodeResponse executeCode(ExecuteCodeRequest executeCodeRequest) {
